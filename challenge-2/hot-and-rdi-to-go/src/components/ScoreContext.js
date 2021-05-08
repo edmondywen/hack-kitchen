@@ -10,9 +10,16 @@ const initialUser = {
   experimental: 0,
 };
 
+[
+  {
+    question: "OSDJFSDFJSOD",
+    onY: ClickedBoneless,
+  },
+];
 // pass in dispatch with an object of type and payload
 
 //example: dispatchUserProfile({ type: "changeSaltyBy", payload: 5})
+
 //increases salty score by 5
 const userProfileChanger = (userProfile, action) => {
   switch (action.type) {
