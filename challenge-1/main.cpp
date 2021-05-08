@@ -60,13 +60,8 @@ int main(int argc, const char * argv[]) {
                 phase_s_p_ = 2;
                 //user object has an isAlive function - use that and health
                 break;
-            case 2:
-                cout << "Phase 2: " <<  user_s_p_.getRating() << endl << endl;
-                cout << "Okay, now we'll get started on your main dish...sticky pork ribs!" << endl;
-                cout << "I know you're a bit dense, so I'll split up the steps to make it easier for you" << endl;
-                break;
             default:
-                cout << "wait you aren't suppoed to be here" << endl;
+                cout << "You donkey you aren't supposed to be here! Get back into the kitchen!" << endl;
                 break;
         }
     }

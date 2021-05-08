@@ -17,7 +17,7 @@ using namespace std;
 int randInt(int min_s_p_, int max_s_p_);
 
 void generateGordonInsult(){
-    int num_s_p_ = randInt(0, 10); //i think the 10 is exclusive? 
+    int num_s_p_ = randInt(0, 9); //i think the 10 is exclusive? randInt is inclusive
     string gordonInsults_s_p_[10] = {
         "               YOU DONKEY!                |",
         "        YOU DON'T MICROWAVE A SALAD       |",
