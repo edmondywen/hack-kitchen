@@ -4,10 +4,10 @@ export const ScoreContext = React.createContext({});
 
 //reducer set up
 const initialUser = {
+  experimental: 0,
   salty: 0,
   sweet: 0,
-  healthy: 0,
-  experimental: 0,
+  healthy: 0
 };
 
 [
