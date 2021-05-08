@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import QuestionPage from "./pages/QuestionPage.js";
 import ResultPage from "./pages/ResultPage.js";
 import cheese from "./img/cheeseq.jpeg";
