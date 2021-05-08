@@ -10,11 +10,15 @@ export default function ResultPage(props) {
     recommendFood(userProfile)
   );
 
+  const nextPage = () => {
+    props.setPage(1);
+  }
+
   return (
     <div className="result-page">
       <h2>you should try these {recommendation.name}!</h2>
       <img src={props.image} alt={props.imageDescription}></img>
-      <button className="order-button">order now</button>
+      <button className="order-button" onClick={nextPage}>order now</button>
     </div>
   );
 }
@@ -24,7 +28,7 @@ function recommendFood(user) {
   const minFood = foods[0];
   let distance = 0;
   for (let item of foods) {
-    distance = calcDistance(user, item);
+    let distance = calcDistance(user, item);
     if (distance < min) {
       minFood = item;
       min = distance;
