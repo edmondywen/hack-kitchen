@@ -18,7 +18,7 @@ function AppContent(props) {
   return (
     <div className="App">
       <h1 className="App-header">HOT AND %RDI</h1>
-      <ResultPage />
+      <QuestionPage />
     </div>
   );
 }
