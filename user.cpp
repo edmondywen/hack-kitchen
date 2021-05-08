@@ -13,46 +13,6 @@
 #include <utility>
 using namespace std;
 
-User::User(string name_s_p_) {
-    m_name_s_p_ = name_s_p_;
-    //idiot sandwich --> associate chef --> executive chef --> masterchef
-    m_chef_rating_s_p_ = "idiot sandwich";
-    m_ribs_s_p_ = new Ribs();
-}
-
-int randInt(int min_s_p_, int max_s_p_)
-{
-    if (max_s_p_ < min_s_p_)
-        std::swap(max_s_p_, min_s_p_);
-    static std::random_device rd;
-    static std::default_random_engine generator(rd());
-    std::uniform_int_distribution<> distro(min_s_p_, max_s_p_);
-    return distro(generator);
-}
-
-
-void User::getSpanked(int force_s_p_){
-    cout << generateGordonInsult() << endl;
-    m_health_s_p_ -= force_s_p_;
-    cout << "*SPANK* Ouch! (×_×#)" << endl;
-}
-
-string User::getName(){
-    return m_name_s_p_;
-}
-
-int User::getHealth() {
-    return m_health_s_p_;
-}
-
-void User::updateRating(string newRating) {
-    m_chef_rating_s_p_ = newRating;
-}
-
-string User::getRating() {
-    return m_chef_rating_s_p_;
-}
-
 string generateGordonInsult(){
     int num_s_p_ = randInt(0, 10); //i think the 10 is exclusive? 
     string gordonInsults_s_p_[10] = {
@@ -68,12 +28,13 @@ string generateGordonInsult(){
         "     you surprise me, how shit you are    |"
     };
     string insult_s_p_ = gordonInsults_s_p_[num_s_p_];
-    const char* ramsayGUI = R"start(
-  ----------------------------------------  
+    const char* ramsayGUI = 
+    
+R"(  ----------------------------------------  
 /                                          \
 |                                          |
-|)start" + insult_s_p_ +  //42 character long message
-R"end(
+|)" + insult_s_p_ +  //42 character long message
+R"(
 |                                          |
 |                                          |
 \                                          /
@@ -111,5 +72,53 @@ R"end(
                           .. .........    ..  ...            ..................    .....,...,,,,,..
                             ..,,,,....    .                   .. .........,,,,,..    ....,,,,,,,,,.
                             ..,.,,.... ...,,,.                 .........,....,,,,..     ...*,,,,,,,
-)end";
+)";
 }
+
+User::User(std::string name_s_p_, int health_s_p_) {
+    m_name_s_p_ = name_s_p_;
+    //idiot sandwich --> associate chef --> executive chef --> masterchef
+    m_chef_rating_s_p_ = "idiot sandwich";
+    m_ribs_s_p_ = new Ribs();
+    m_health_s_p_ = health_s_p_;
+}
+
+int randInt(int min_s_p_, int max_s_p_)
+{
+    if (max_s_p_ < min_s_p_)
+        std::swap(max_s_p_, min_s_p_);
+    static std::random_device rd;
+    static std::default_random_engine generator(rd());
+    std::uniform_int_distribution<> distro(min_s_p_, max_s_p_);
+    return distro(generator);
+}
+
+
+void User::getSpanked(int force_s_p_){
+    cout << generateGordonInsult() << endl;
+    m_health_s_p_ -= force_s_p_;
+    cout << "*SPANK* Ouch! (×_×#)" << endl;
+}
+
+string User::getName(){
+    return m_name_s_p_;
+}
+
+int User::getHealth() {
+    return m_health_s_p_;
+}
+
+void User::updateRating(string newRating) {
+    m_chef_rating_s_p_ = newRating;
+}
+
+bool User::isAlive(){
+    if (m_health_s_p_ > 0){
+        return true;
+    }
+    return false;
+}
+string User::getRating() {
+    return m_chef_rating_s_p_;
+}
+

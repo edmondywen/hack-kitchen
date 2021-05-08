@@ -7,15 +7,16 @@
 
 #ifndef ribs_hpp
 #define ribs_hpp
-#include <vector>
-#include <stdio.h>
+#include <vector>#include <stdio.h>
 class Ribs {
     public:
-        int getQuality(){ return m_quality_s_p_; } // 0-3 for michelin
         Ribs();
+        int getQuality(){ return m_quality_s_p_; } // 0-3 for michelin
+        int upScore(int howmuch_s_p_){m_score_s_p_ += howmuch_s_p_;}
+        
     private:
         int m_quality_s_p_;
-
+        int m_score_s_p_;
 };
 
 #endif /* ribs_hpp */
