@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
             case 1:
                 cout << "Phase 1: " << user_s_p_.getRating() << endl << endl;
                 cout << "Okay this is SUPER simple so I hope you get this right..." << endl;
-                cout << "eggs snails rigatoni" << endl;
+                cout << "ribs biscuits fries" << endl;
                 sleep(5000);
                 clearScreen();
                 cout << "What were the ingredients? (try including 'beans' for an easter egg!)" << endl;
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
                 if (answer_s_p_.find("beans") >= 0) {
                     cout << "BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS" << endl;
                 }
-                if (answer_s_p_.find("eggs snails rigatoni") >= 0) {
+                if (answer_s_p_.find("ribs biscuits fries") >= 0) {
                     cout << "Not bad. But I'm still skeptical about your skills." << endl;
                     user_s_p_.updateRating("associate chef");
                     cout << "Your rank is now: " << user_s_p_.getRating() << endl;
