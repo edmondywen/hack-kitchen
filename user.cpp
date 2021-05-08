@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 #include "user.h";
 #include "ribs.h";
 #include <random>
@@ -32,7 +33,7 @@ int randInt(int min_s_p_, int max_s_p_)
 
 
 void User::getSpanked(int force_s_p_){
-    cout << generateGordonInsult() << endl;
+    generateGordonInsult();
     m_health_s_p_ -= force_s_p_;
     cout << "*SPANK* Ouch! (×_×#)" << endl;
 }
@@ -53,7 +54,8 @@ string User::getRating() {
     return m_chef_rating_s_p_;
 }
 
-string generateGordonInsult(){
+
+void generateGordonInsult(){
     int num_s_p_ = randInt(0, 10); //i think the 10 is exclusive? 
     string gordonInsults_s_p_[10] = {
         "               YOU DONKEY!                |",
@@ -67,12 +69,18 @@ string generateGordonInsult(){
         "        chimi chuck it in the bin         |",
         "     you surprise me, how shit you are    |"
     };
-    string insult_s_p_ = gordonInsults_s_p_[num_s_p_];
-    const char* ramsayGUI = R"start(
+    string tempInsult_s_p_ = gordonInsults_s_p_[num_s_p_];
+    char* insult_s_p_ = new char[tempInsult_s_p_.length()+1];
+    //convert the string to a c-string
+    strcpy(insult_s_p_, tempInsult_s_p_.c_str());
+    char ramsayGUI_s_p_[5000];
+    strcat(ramsayGUI_s_p_, R"foo(
   ----------------------------------------  
 /                                          \
 |                                          |
-|)start" + insult_s_p_ +  //42 character long message
+|)foo");
+strcat(ramsayGUI_s_p_, insult_s_p_);  //42 character long message
+strcat(ramsayGUI_s_p_,
 R"end(
 |                                          |
 |                                          |
@@ -111,5 +119,6 @@ R"end(
                           .. .........    ..  ...            ..................    .....,...,,,,,..
                             ..,,,,....    .                   .. .........,,,,,..    ....,,,,,,,,,.
                             ..,.,,.... ...,,,.                 .........,....,,,,..     ...*,,,,,,,
-)end";
+)end");
+cout << ramsayGUI_s_p_ << endl;
 }
