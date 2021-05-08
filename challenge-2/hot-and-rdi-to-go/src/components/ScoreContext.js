@@ -93,6 +93,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedBoneless(response) {
@@ -102,15 +103,17 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedCholesterol(response) {
     if (response) {
-      dispatchUserProfile({ type: "change ExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
       dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
       dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedRolled(response) {
@@ -120,6 +123,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedChocolate(response) {
@@ -128,12 +132,14 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedLift(response) {
     if (response) {
       dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedMagic(response) {
@@ -143,6 +149,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedBoneless(response) {
@@ -152,6 +159,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedCholesterol(response) {
@@ -161,6 +169,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedRolled(response) {
@@ -170,6 +179,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedChocolate(response) {
@@ -178,12 +188,14 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedLift(response) {
     if (response) {
       dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedMagic(response) {
@@ -193,6 +205,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedBoneless(response) {
@@ -202,6 +215,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedCholesterol(response) {
@@ -211,6 +225,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedRolled(response) {
@@ -220,6 +235,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedChocolate(response) {
@@ -228,12 +244,14 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   function clickedLift(response) {
     if (response) {
       dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
   function clickedBoneless(response) {
     if (response) {
@@ -243,6 +261,7 @@ export function ScoreProvider(props) {
       dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
       dispatchUserProfile({ type: "changeSaltyBy", payload: 5 });
     }
+    setProgression((prevProgression) => prevProgression + 1);
   }
 
   return (

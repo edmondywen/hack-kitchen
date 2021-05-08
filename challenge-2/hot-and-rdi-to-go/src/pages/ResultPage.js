@@ -6,7 +6,9 @@ import { foods } from "../components/foods.js";
 export default function ResultPage(props) {
   const { userProfile } = useContext(ScoreContext);
   //Euclidian distance stuff
-  const [recommendation, setRecommendation] = useState(recommendFood(userProfile));
+  const [recommendation, setRecommendation] = useState(
+    recommendFood(userProfile)
+  );
 
   const nextPage = () => {
     props.setPage(1);
@@ -24,7 +26,7 @@ export default function ResultPage(props) {
 function recommendFood(user) {
   const min = calcDistance(user, foods[0]);
   const minFood = foods[0];
-  const distance = 0;
+  let distance = 0;
   for (let item of foods) {
     let distance = calcDistance(user, item);
     if (distance < min) {
