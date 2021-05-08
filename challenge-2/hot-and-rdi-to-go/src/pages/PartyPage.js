@@ -18,6 +18,10 @@ export default function PartyPage(props) {
     })
   }
 
+  const nextPage = () => {
+    props.setPage(2)
+  }
+
   return (
     <div>
       <h2>Your current total is ${total} for {numOrders} orders</h2>
@@ -27,7 +31,7 @@ export default function PartyPage(props) {
           <p>%rax of ribs</p>
           <p>$16.99</p>
         </div>
-      <button className="recommend-button">get order recommendation</button>
+      <button className="recommend-button" onClick={nextPage}>get order recommendation</button>
     </div>
   );
 }
