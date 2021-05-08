@@ -9,7 +9,7 @@ class States {
     public:
         States();
         States(string story, vector<States*> nextStates);
-        ~States(States* head);
+        ~States();
         void setStory(string story);
         string getStory();
 
@@ -19,7 +19,7 @@ class States {
     private:
         string m_storyText_s_p_;
         vector<States*> m_nextStates_s_p_;
-}
+};
 
 
 
