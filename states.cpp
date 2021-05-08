@@ -2,10 +2,11 @@
 
 #include <string>
 #include <vector>
+using namespace std;
 
 States::States() {
     setStory("");
-    m_nextStates_s_p_ = new vector<States*>;
+    //m_nextStates_s_p_ = new vector<States*>;
 }
 
 States::States(string story, vector<States*> nextStates) {
@@ -13,7 +14,7 @@ States::States(string story, vector<States*> nextStates) {
     setStates(nextStates);
 }
 
-States::~States(States* head) {
+States::~States() {
     //Do later
 }
 
@@ -27,9 +28,9 @@ string States::getStory() {
 }
 
 void setStates(vector<States*> nextStates) {
-    m_nextStates_s_p_ = nextStates;
+    //m_nextStates_s_p_ = nextStates;
 }
 
 void addStates(States* newState) {
-    m_nextStates_s_p_.push_back(newState);
+    //m_nextStates_s_p_.push_back(newState);
 }
