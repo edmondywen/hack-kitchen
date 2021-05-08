@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./ResultPage.css";
 import { ScoreContext } from "../components/ScoreContext";
 import { foods } from "../components/foods.js";
 
 export default function ResultPage(props) {
-  const { user } = useContext(ScoreContext);
+  const { userProfile } = useContext(ScoreContext);
   //Euclidian distance stuff
-  const [recommendation, setRecommendation] = useState(recommendFood(user));
+  const [recommendation, setRecommendation] = useState(recommendFood(userProfile));
 
   return (
     <div className="result-page">

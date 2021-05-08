@@ -47,7 +47,7 @@ const userProfileChanger = (userProfile, action) => {
   }
 };
 
-function ScoreProvider(props) {
+export function ScoreProvider(props) {
   //state variable for progression
 
   //Number 0-10 for how many questions completed
