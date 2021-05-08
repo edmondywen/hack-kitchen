@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import PartyPage from "./pages/PartyPage.js";
 import QuestionPage from "./pages/QuestionPage.js";
 import ResultPage from "./pages/ResultPage.js";

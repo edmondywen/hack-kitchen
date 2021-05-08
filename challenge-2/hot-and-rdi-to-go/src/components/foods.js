@@ -1,7 +1,7 @@
 const foods = [
   {
     name: "Mac and Cheese",
-    experimental: 1, 
+    experimental: 1,
     salty: 15,
     sweet: 2,
     healthy: 3,
@@ -62,7 +62,5 @@ const foods = [
     sweet: 10,
     healthy: 3,
   },
-
-  
 ];
-export const foods;
+export { foods };
