@@ -261,9 +261,11 @@ export function ScoreProvider(props) {
 }
 
 export function MenuPage(props) {
-  <ScoreProvider>
-    <MenuPageContent />
-  </ScoreProvider>;
+  return (
+    <ScoreProvider>
+      <MenuPageContent />
+    </ScoreProvider>
+  );
 }
 
 //put in your page content here
