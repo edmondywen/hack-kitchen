@@ -17,7 +17,7 @@ export default function ResultPage(props) {
   );
 }
 
-function calcMinDistance(user) {
+function recommendFood(user) {
   const min = calcDistance(user, foods[0]);
   const minFood = foods[0]
   const distance = 0;
