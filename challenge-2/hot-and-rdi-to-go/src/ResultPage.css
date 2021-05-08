@@ -1,0 +1,23 @@
+.result-page {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 800px;
+    align-content: center;
+}
+
+.order-button {
+    font-size: 24px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 20px;
+    align-self: center;
+}
+
+.order-button:hover {
+    background-color: rgb(196, 196, 196)
+}
+
+.order-button:focus {
+    outline: none;
+}

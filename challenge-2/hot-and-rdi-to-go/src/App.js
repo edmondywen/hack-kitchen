@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import QuestionPage from "./QuestionPage.js";
+import ResultPage from "./ResultPage.js";
+import cheese from "./img/cheeseq.jpeg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-header">HOT AND %RDI</h1>
+      <QuestionPage />
     </div>
   );
 }
