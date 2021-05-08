@@ -4,10 +4,10 @@ export const ScoreContext = React.createContext({});
 
 //reducer set up
 const initialUser = {
-  experimental: 0,
   salty: 0,
   sweet: 0,
-  healthy: 0
+  healthy: 0,
+  experimental: 0,
 };
 
 // pass in dispatch with an object of type and payload
@@ -60,10 +60,181 @@ function ScoreProvider(props) {
   );
   const questionList = [
     {
-      question: "OSDJFSDFJSOD",
+      question: "BONELESS!?!?!?!!?!?",
       response: clickedBoneless,
     },
+    {
+      question: "Do you feel the magic?",
+      response: clickedMagic,
+    },
+    {
+      question: "Do you have a family history of high cholestorol?",
+      response: clickedCholesterol,
+    },
+    {
+      question: "Somebody once told me the world was gonna roll me?",
+      response: clickedRolled,
+    },
+    {
+      question: "Would you feel at home at Charlie’s Chocolate Factory?",
+      response: clickedChocolate,
+    },
+    {
+      question: "Do you even lift bro?",
+      response: clickedLift,
+    },
   ];
+
+  //FUNCTIONS FOR FOOD CLICKING
+  function clickedMagic(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
+    }
+  }
+
+  function clickedBoneless(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedCholesterol(response) {
+    if (response) {
+      dispatchUserProfile({ type: "change ExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
+    }
+  }
+
+  function clickedRolled(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedChocolate(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeSweetBy", payload: 10 });
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedLift(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
+    }
+  }
+
+  function clickedMagic(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
+    }
+  }
+
+  function clickedBoneless(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedCholesterol(response) {
+    if (response) {
+      dispatchUserProfile({ type: "change ExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
+    }
+  }
+
+  function clickedRolled(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedChocolate(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeSweetBy", payload: 10 });
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedLift(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
+    }
+  }
+
+  function clickedMagic(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
+    }
+  }
+
+  function clickedBoneless(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedCholesterol(response) {
+    if (response) {
+      dispatchUserProfile({ type: "change ExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
+    }
+  }
+
+  function clickedRolled(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
+      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedChocolate(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeSweetBy", payload: 10 });
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
+    }
+  }
+
+  function clickedLift(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
+    }
+  }
   function clickedBoneless(response) {
     if (response) {
       dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
@@ -81,6 +252,7 @@ function ScoreProvider(props) {
         setProgression,
         userProfile,
         dispatchUserProfile,
+        questionList,
       }}
     >
       {props.children}
