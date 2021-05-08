@@ -8,11 +8,13 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "user.h";
-#include "ribs.h";
+#include "user.h"
+#include "ribs.h"
 #include <random>
 #include <utility>
 using namespace std;
+
+int randInt(int min_s_p_, int max_s_p_);
 
 void generateGordonInsult(){
     int num_s_p_ = randInt(0, 10); //i think the 10 is exclusive? 
