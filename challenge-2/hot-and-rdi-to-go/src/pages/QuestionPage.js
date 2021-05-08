@@ -12,12 +12,12 @@ export default function QuestionPage(props) {
   };
 
   const questionComponents = questionList.map((item) => (
-    <Question question={item.question} response={item.response} />
+    <Question question={item.question} response={item.response} image={cheese} />
   ));
   const currentComponent = questionComponents[progression];
   return (
     <div className="question-page">
-      <h2 className="progress">{progression + 1}/10</h2>
+      <h2 className="progress">{progression + 1}/6</h2>
       {currentComponent}
       <div className="background">
         <button
@@ -25,14 +25,18 @@ export default function QuestionPage(props) {
           onClick={() => {
             console.log("User's salty  is " + userProfile.salty);
             currentComponent.props.response(false);
+            if (progression == 5)
+              nextPage();
           }}
         ></button>
         <button
           className="swipe-green"
-          onClick={() => currentComponent.props.response(true)}
+          onClick={() => {
+            currentComponent.props.response(true);
+            if (progression == 5)
+              nextPage();
+          }}
         ></button>
-        <button className="swipe-red" onClick={nextPage}></button>
-        <button className="swipe-green" onClick={nextPage}></button>
       </div>
     </div>
   );

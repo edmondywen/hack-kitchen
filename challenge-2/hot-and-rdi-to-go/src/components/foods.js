@@ -1,3 +1,4 @@
+import macAndCheese from "../img/cheeseq.jpeg"
 const foods = [
   {
     name: "Mac and Cheese",
@@ -5,6 +6,7 @@ const foods = [
     salty: 15,
     sweet: 2,
     healthy: 3,
+    image: {macAndCheese}
   },
   {
     name: "Ribs",
@@ -12,6 +14,7 @@ const foods = [
     salty: 17,
     sweet: 10,
     healthy: 6,
+    image: {macAndCheese}
   },
   {
     name: "Caeser Salad",
@@ -19,6 +22,7 @@ const foods = [
     salty: 10,
     sweet: 2,
     healthy: 18,
+    image: {macAndCheese}
   },
   {
     name: "Sourdough Bread",
@@ -26,6 +30,7 @@ const foods = [
     salty: 3,
     sweet: 2,
     healthy: 15,
+    image: {macAndCheese}
   },
   {
     name: "Tortilla Chip Sombrero",
@@ -33,6 +38,7 @@ const foods = [
     salty: 15,
     sweet: 2,
     healthy: 3,
+    image: {macAndCheese}
   },
   {
     name: "Cake",
@@ -40,6 +46,7 @@ const foods = [
     salty: 4,
     sweet: 15,
     healthy: 5,
+    image: {macAndCheese}
   },
   {
     name: "Pizza",
@@ -47,6 +54,7 @@ const foods = [
     salty: 15,
     sweet: 10,
     healthy: 6,
+    image: {macAndCheese}
   },
   {
     name: "Green Eggs and Ham",
@@ -54,6 +62,7 @@ const foods = [
     salty: 20,
     sweet: 10,
     healthy: 10,
+    image: {macAndCheese}
   },
   {
     name: "Gotcha Pork",
@@ -61,6 +70,7 @@ const foods = [
     salty: 20,
     sweet: 10,
     healthy: 3,
+    image: {macAndCheese}
   },
 ];
 export { foods };

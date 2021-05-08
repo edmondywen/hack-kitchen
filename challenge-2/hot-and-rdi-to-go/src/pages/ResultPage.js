@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./ResultPage.css";
 import { ScoreContext } from "../components/ScoreContext";
 import { foods } from "../components/foods.js";
+import cheese from "../img/cheeseq.jpeg"
 
 export default function ResultPage(props) {
   const { userProfile } = useContext(ScoreContext);
@@ -17,15 +18,15 @@ export default function ResultPage(props) {
   return (
     <div className="result-page">
       <h2>you should try these {recommendation.name}!</h2>
-      <img src={props.image} alt={props.imageDescription}></img>
+      <img src={cheese} alt={recommendation.name}></img>
       <button className="order-button" onClick={nextPage}>order now</button>
     </div>
   );
 }
 
 function recommendFood(user) {
-  const min = calcDistance(user, foods[0]);
-  const minFood = foods[0];
+  let min = calcDistance(user, foods[0]);
+  let minFood = foods[0];
   let distance = 0;
   for (let item of foods) {
     let distance = calcDistance(user, item);
