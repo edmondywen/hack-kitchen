@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Question.css";
 
 export default function Question(props) {

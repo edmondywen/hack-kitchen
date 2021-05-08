@@ -25,6 +25,7 @@
 .App-header {
   position: absolute;
   top: 0px;
+  margin-top: 25px;
 }
 
 .App-link {

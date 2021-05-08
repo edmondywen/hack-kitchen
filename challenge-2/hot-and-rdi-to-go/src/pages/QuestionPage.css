@@ -1,0 +1,57 @@
+.question-page {
+    position: absolute;
+    width: 100%;
+    align-items: center;
+}
+
+.progress {
+    position: relative;
+    z-index: 5;
+    background-color: white;
+    align-self: center;
+    width: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 40px auto 20px auto;
+}
+
+.background {
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+
+.swipe-red {
+    position: absolute;
+    top: 20px;
+    width: 50%;
+    background-color: rgb(255, 167, 167);
+    height: 120%;
+    border: none;
+}
+
+.swipe-red:focus {
+    outline: none;
+}
+
+.swipe-red:hover {
+    background-color: rgb(255, 104, 104);
+}
+
+.swipe-green {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50%;
+    background-color: rgb(167, 255, 179);
+    height: 120%;
+    border: none;
+}
+
+.swipe-green:focus {
+    outline: none;
+}
+
+.swipe-green:hover {
+    background-color: rgb(109, 255, 104);
+}
