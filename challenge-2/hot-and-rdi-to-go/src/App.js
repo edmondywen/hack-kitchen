@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import QuestionPage from "./QuestionPage.js";
-import ResultPage from "./ResultPage.js";
+import QuestionPage from "./pages/QuestionPage.js";
+import ResultPage from "./pages/ResultPage.js";
 import cheese from "./img/cheeseq.jpeg";
 
 function App() {

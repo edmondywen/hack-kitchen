@@ -1,11 +1,12 @@
 import React from "react";
-import Question from "./components/Question.js";
-import cheese from "./img/cheeseq.jpeg";
-import "./components/Question.css";
+import Question from "../components/Question.js";
+import cheese from "../img/cheeseq.jpeg";
+import "../components/Question.css";
 
 export default function QuestionPage(props) {
   return (
     <div className="question-page">
+        <h2>1/10</h2>
         <Question className="question-hover" 
             question="ya like cheese?"
             image={cheese}
