@@ -47,7 +47,7 @@ const userProfileChanger = (userProfile, action) => {
   }
 };
 
-function ScoreProvider(props) {
+export function ScoreProvider(props) {
   //state variable for progression
 
   //Number 0-10 for how many questions completed
@@ -261,9 +261,11 @@ function ScoreProvider(props) {
 }
 
 export function MenuPage(props) {
-  <ScoreProvider>
-    <MenuPageContent />
-  </ScoreProvider>;
+  return (
+    <ScoreProvider>
+      <MenuPageContent />
+    </ScoreProvider>
+  );
 }
 
 //put in your page content here

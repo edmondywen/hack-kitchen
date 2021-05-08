@@ -1,18 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./ResultPage.css";
 import { ScoreContext } from "../components/ScoreContext";
 import { foods } from "../components/foods.js";
 
 export default function ResultPage(props) {
-  const { user } = useContext(ScoreContext);
+  const { userProfile } = useContext(ScoreContext);
   //Euclidian distance stuff
-  const [recommendation, setRecommendation] = useState(recommendFood(user));
+  const [recommendation, setRecommendation] = useState(recommendFood(userProfile));
+
+  const nextPage = () => {
+    props.setPage(1);
+  }
 
   return (
     <div className="result-page">
       <h2>you should try these {recommendation.name}!</h2>
       <img src={props.image} alt={props.imageDescription}></img>
-      <button className="order-button">order now</button>
+      <button className="order-button" onClick={nextPage}>order now</button>
     </div>
   );
 }
@@ -22,7 +26,7 @@ function recommendFood(user) {
   const minFood = foods[0];
   const distance = 0;
   for (let item of foods) {
-    distance = calcDistance(user, item);
+    let distance = calcDistance(user, item);
     if (distance < min) {
       minFood = item;
       min = distance;
