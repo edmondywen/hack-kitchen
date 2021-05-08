@@ -10,12 +10,6 @@ const initialUser = {
   experimental: 0,
 };
 
-[
-  {
-    question: "OSDJFSDFJSOD",
-    onY: ClickedBoneless,
-  },
-];
 // pass in dispatch with an object of type and payload
 
 //example: dispatchUserProfile({ type: "changeSaltyBy", payload: 5})
@@ -64,6 +58,21 @@ function ScoreProvider(props) {
     userProfileChanger,
     initialUser
   );
+  const questionList = [
+    {
+      question: "OSDJFSDFJSOD",
+      response: clickedBoneless,
+    },
+  ];
+  function clickedBoneless(response) {
+    if (response) {
+      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
+    } else {
+      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
+      dispatchUserProfile({ type: "changeSaltyBy", payload: 5 });
+    }
+  }
 
   return (
     <ScoreContext.Provider
