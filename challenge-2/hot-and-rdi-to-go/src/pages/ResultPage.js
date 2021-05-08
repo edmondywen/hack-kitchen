@@ -7,10 +7,11 @@ import { foods } from "../components/foods.js";
 export default function ResultPage(props) {
   const { user } = useContext(ScoreContext);
   //Euclidian distance stuff
+  const [recommendation, setRecommendation] = useState(recommendFood(user));
 
   return (
     <div className="result-page">
-      <h2>you should try these {props.menu}!</h2>
+      <h2>you should try these {recommendation.name}!</h2>
       <img src={props.image} alt={props.imageDescription}></img>
       <button className="order-button">order now</button>
     </div>
