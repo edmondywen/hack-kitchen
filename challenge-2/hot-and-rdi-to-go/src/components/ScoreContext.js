@@ -108,7 +108,7 @@ export function ScoreProvider(props) {
 
   function clickedCholesterol(response) {
     if (response) {
-      dispatchUserProfile({ type: "change ExperimentalBy", payload: 0 });
+      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
       dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
       dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
