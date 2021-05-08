@@ -11,7 +11,9 @@
 #include <stdio.h>
 class Ribs {
     public:
-        Ribs();
+        Ribs(){
+    m_quality_s_p_ = 0;
+    };
         int getQuality(){ return m_quality_s_p_; } // 0-3 for michelin
         void upScore(int howmuch_s_p_){m_score_s_p_ += howmuch_s_p_;}
         

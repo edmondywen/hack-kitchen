@@ -8,8 +8,8 @@
 #include <iostream>
 #include <unistd.h>
 #include <string>
-#include "ribs.cpp"
-#include "user.cpp"
+#include "ribs.h"
+#include "user.h"
 using namespace std;
 
 void clearScreen();
@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
 
 
     // insert code here...
-    cout << "Welcome to Gordon Ramsey's kitchen! You are a noob chef who will begin training under Gordon in the hopes of eventually reaching the master chef level." << endl;
+    cout << "Welcome to Gordon Ramsey's kitchen! You are an idiot sandwich chef who will begin training under Gordon in the hopes of eventually reaching the master chef level." << endl;
     cout << "You must remember all of the ingredients that Gordon Ramsey wants for each meal, or you will get massively spanked!!" << endl << endl;
     cout << "I have very low hopes for you...wait, what's your name again?" << endl << endl;
     string name_s_p_;;
@@ -36,14 +36,14 @@ int main(int argc, const char * argv[]) {
                 cout << "Phase 1: " << user_s_p_.getRating() << endl << endl;
                 cout << "Okay this is SUPER simple so I hope you get this right..." << endl;
                 cout << "ribs biscuits fries" << endl;
-                sleep(5000);
+                sleep(5);
                 clearScreen();
                 cout << "What were the ingredients? (try including 'beans' for an easter egg!)" << endl;
                 getline(cin, answer_s_p_);
-                if (answer_s_p_.find("beans") >= 0) {
+                if (answer_s_p_.find("beans") != std::string::npos) {
                     cout << "BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS BEANS" << endl;
                 }
-                if (answer_s_p_.find("ribs biscuits fries") >= 0) {
+                if (answer_s_p_.find("ribs biscuits fries") != std::string::npos) {
                     cout << "Not bad. But I'm still skeptical about your skills." << endl;
                     user_s_p_.updateRating("associate chef");
                     cout << "Your rank is now: " << user_s_p_.getRating() << endl;
@@ -61,9 +61,9 @@ int main(int argc, const char * argv[]) {
                 //user object has an isAlive function - use that and health
                 break;
             default:
-                cout << "You donkey you aren't supposed to be here! Get back into the kitchen!" << endl;
                 break;
         }
+        break;
     }
 }
 //spicy
