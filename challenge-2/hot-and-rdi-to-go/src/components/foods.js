@@ -1,4 +1,15 @@
-import macAndCheese from "../img/cheeseq.jpeg"
+import boneless from "../images/boneless.png";
+import burger from "../images/burger.jpeg";
+import caeser from "../images/caeser.jpeg";
+import chocolate from "../images/chocolate.jpeg";
+import greeneggs from "../images/green-eggs.jpeg";
+import lift from "../images/lift.jpeg";
+import mac from "../images/mac.jpeg";
+import pizza from "../images/pizza.jpeg";
+import porkRoast from "../images/pork-roast.jpeg";
+import shrek from "../images/shrek.png";
+import sourdough from "../images/sourdough.jpeg";
+import tortilla from "../images/tortilla.jpeg";
 const foods = [
   {
     name: "Mac and Cheese",
@@ -6,15 +17,15 @@ const foods = [
     salty: 15,
     sweet: 2,
     healthy: 3,
-    image: {macAndCheese}
+    image: { mac },
   },
   {
-    name: "Ribs",
+    name: "%rax of ribs",
     experimental: 1,
     salty: 17,
     sweet: 10,
     healthy: 6,
-    image: {macAndCheese}
+    image: { burger },
   },
   {
     name: "Caeser Salad",
@@ -22,7 +33,7 @@ const foods = [
     salty: 10,
     sweet: 2,
     healthy: 18,
-    image: {macAndCheese}
+    image: { caeser },
   },
   {
     name: "Sourdough Bread",
@@ -30,7 +41,7 @@ const foods = [
     salty: 3,
     sweet: 2,
     healthy: 15,
-    image: {macAndCheese}
+    image: { sourdough },
   },
   {
     name: "Tortilla Chip Sombrero",
@@ -38,7 +49,7 @@ const foods = [
     salty: 15,
     sweet: 2,
     healthy: 3,
-    image: {macAndCheese}
+    image: { tortilla },
   },
   {
     name: "Cake",
@@ -46,7 +57,7 @@ const foods = [
     salty: 4,
     sweet: 15,
     healthy: 5,
-    image: {macAndCheese}
+    image: { chocolate },
   },
   {
     name: "Pizza",
@@ -54,7 +65,7 @@ const foods = [
     salty: 15,
     sweet: 10,
     healthy: 6,
-    image: {macAndCheese}
+    image: { pizza },
   },
   {
     name: "Green Eggs and Ham",
@@ -62,7 +73,7 @@ const foods = [
     salty: 20,
     sweet: 10,
     healthy: 10,
-    image: {macAndCheese}
+    image: { greeneggs },
   },
   {
     name: "Gotcha Pork",
@@ -70,7 +81,7 @@ const foods = [
     salty: 20,
     sweet: 10,
     healthy: 3,
-    image: {macAndCheese}
+    image: { porkRoast },
   },
 ];
 export { foods };

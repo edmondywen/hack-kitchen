@@ -10,6 +10,10 @@ const initialUser = {
   experimental: 0,
 };
 
+// dispatch(increment sweet by 15)
+
+// sort
+
 // pass in dispatch with an object of type and payload
 
 //example: dispatchUserProfile({ type: "changeSaltyBy", payload: 5})
@@ -44,6 +48,9 @@ const userProfileChanger = (userProfile, action) => {
         experimental: userProfile.experimental + action.payload,
       };
     }
+    case "resetProfile": {
+      return { ...initialUser };
+    }
   }
 };
 
@@ -68,7 +75,7 @@ export function ScoreProvider(props) {
       response: clickedMagic,
     },
     {
-      question: "Do you have a family history of high cholestorol?",
+      question: "Do you have a family history of high cholesterol?",
       response: clickedCholesterol,
     },
     {
@@ -89,16 +96,12 @@ export function ScoreProvider(props) {
   function clickedMagic(response) {
     if (response) {
       dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
     }
     setProgression((prevProgression) => (prevProgression + 1) % 6);
   }
 
   function clickedBoneless(response) {
     if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
       dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
       dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
@@ -108,7 +111,6 @@ export function ScoreProvider(props) {
 
   function clickedCholesterol(response) {
     if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
       dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
       dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
@@ -119,7 +121,6 @@ export function ScoreProvider(props) {
   function clickedRolled(response) {
     if (response) {
       dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
       dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
       dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
     }
@@ -138,128 +139,6 @@ export function ScoreProvider(props) {
   function clickedLift(response) {
     if (response) {
       dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedMagic(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedBoneless(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedCholesterol(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedRolled(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedChocolate(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeSweetBy", payload: 10 });
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedLift(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedMagic(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 20 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: 0 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: 0 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedBoneless(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedCholesterol(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: -20 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: -15 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: 10 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedRolled(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 10 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 0 });
-      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-
-  function clickedChocolate(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeSweetBy", payload: 10 });
-      dispatchUserProfile({ type: "changeExperimentalBy", payload: 5 });
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -5 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 61);
-  }
-
-  function clickedLift(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeHealthyBy", payload: -10 });
-    }
-    setProgression((prevProgression) => (prevProgression + 1) % 6);
-  }
-  function clickedBoneless(response) {
-    if (response) {
-      dispatchUserProfile({ type: "changeSweetBy", payload: 5 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: -5 });
-    } else {
-      dispatchUserProfile({ type: "changeSweetBy", payload: -5 });
-      dispatchUserProfile({ type: "changeSaltyBy", payload: 5 });
     }
     setProgression((prevProgression) => (prevProgression + 1) % 6);
   }
